@@ -1,0 +1,38 @@
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #023e8a;
+}
+
+.circle {
+  height: 400px;
+  width: 400px;
+  background: linear-gradient(to top, #03045e 0%, #0096c7 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.inner-circle {
+  height: 360px;
+  width: 360px;
+  background: linear-gradient(to top, #03045e 0%, #48cae4 100%);
+  border-radius: 50%;
+  filter: blur(18px);
+}
+
+.circle::before{
+  content: '';
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  bottom: -40px;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(10px);
+}
